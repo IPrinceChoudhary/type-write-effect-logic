@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --navy: #191970;
+  --dark-blue: #002147;
+  --medium-blue: #0000cd;
+  --sky-blue: #87CEFF;
+  --bright-pink: #ff007f;
+  --light-pink: #DD85D8;
+  --rose-pink: #ff66cc;
+}
+
+nav{
+  background-color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  font-family: cursive;
+  text-decoration: none;
+  color: var(--bright-pink);
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+ul{
+  display: none;
+}
+
+h1{
+  display: inline;
+}
+
+.ham{
+  height: 1.7rem;
+  width: 2.2rem;
+  margin: 0 1rem;
+  margin-top: .4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+}
+
+.span{
+  position: absolute;
+  height: .3rem;
+  width: 100%;
+  background-color: var(--bright-pink);
+  transition: all .5s ease;
+  left: 0;
+}
+
+.span:nth-child(1){
+  top: 0%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.span:nth-child(2){
+  top: .7rem;
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+.span:nth-child(3){
+  bottom: 0%;
+  border-radius: 0 0 2rem 2rem ;
+}
+
+.ham.open span:nth-child(1){
+  top: .8rem;
+  border-radius: 2rem;
+  transform: rotate(135deg);
+}
+
+.ham.open span:nth-child(2){
+  opacity: 0;
+  left: -2rem;
+}
+
+.ham.open span:nth-child(3){
+  top: .8rem;
+  border-radius: 2rem;
+  transform: rotate(-135deg);
+}
+
+/* main page  */
+
+.main{
+  background: rgb(255,0,127);
+background: linear-gradient(0deg, rgba(255,0,127,1) 0%, rgba(25,25,112,1) 100%);
+height: 100vh;
+}
+
+/* type writer effect css  */
+.txt{
+  border-right: 2px solid var(--bright-pink);
+  animation: cursor .5s infinite forwards;
+}
+
+
+@keyframes cursor{
+  0%{
+    border-right: 2px solid var(--bright-pink);
+  }
+  50%{
+    border-right: 2px solid white; 
+  }
+}
